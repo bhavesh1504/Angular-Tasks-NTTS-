@@ -1,0 +1,61 @@
+<div [ngClass]="isDarkTheme? 'dark-theme' : 'light-theme'">
+
+    <mat-toolbar>
+    <span>&nbsp;Datatable with search, and pagination With Dummy Array Data</span>
+    <span class="example-spacer"></span>
+    </mat-toolbar>
+  <mat-card>
+    <mat-card-content>
+      <mat-slide-toggle (click)="toggleTheme()">{{title}}</mat-slide-toggle>
+    </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-form-field appearance="standard">
+      <mat-label>Filter Table</mat-label>
+      <input (keyup)="applyFilter($event.target.value)" matInput placeholder="search">
+      
+    </mat-form-field>
+    </mat-card>
+  <div class="mat-elevation-z8">
+  <table mat-table matSort [dataSource]="dataSource">
+  
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header=""><strong>ID</strong></th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+  
+   
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header=""><strong>Title</strong></th>
+      <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+    </ng-container>
+  
+    
+    <ng-container matColumnDef="userid">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header=""><strong>UserID</strong></th>
+      <td mat-cell *matCellDef="let element"> {{element.userid}} </td>
+    </ng-container>
+  
+    
+    <ng-container matColumnDef="body">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header=""><strong>Body</strong></th>
+      <td mat-cell *matCellDef="let element"> {{element.body}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+  </table>
+  
+  <mat-paginator [pageSizeOptions]="[5,10,15,20]" aria-label="select page of users"></mat-paginator>
+  <mat-card>
+    <footer class="bg-light text-center text-lg-start">
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright:
+        <p>A copyright notice is a short line of text that lets the public know that your work is protected by copyright law and is not to be copied. These copyright notices are widely used and can be found all over, from websites and blogs, to films and music.</p>
+      </div>
+    </footer>
+  </mat-card>
+  
+  </div>
+  </div>

@@ -1,0 +1,23 @@
+<div class="center"><p><strong>Customer No : </strong>{{customer.customerNo}}</p></div>
+<div class="custom-centered">
+    <label for="inputEmail4" class="form-label">Name</label>
+    <input type="email" class="form-control" id="inputEmail4" [(ngModel)]="customer.name">
+
+    <label for="inputAddress" class="form-label">Address</label>
+    <input type="text" class="form-control" id="inputAddress" [(ngModel)]="customer.address">
+
+
+    <label for="inputCity" class="form-label">City</label>
+    <input type="text" class="form-control" id="inputCity" [(ngModel)]="customer.city">
+
+
+    <label for="inputZip" class="form-label">State</label>
+    <input type="text" class="form-control" id="inputZip" [(ngModel)]="customer.state">
+
+
+    <label for="inputZip" class="form-label">Country</label>
+    <input type="text" class="form-control" id="inputZip" [(ngModel)]="customer.country">
+    <div class="custom">
+    <button (click)="update()" class="btn btn-primary">Update</button>
+    </div>
+</div>

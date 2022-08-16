@@ -1,0 +1,10 @@
+.dashboard{
+    padding: 3%;
+    background-color:green;
+    width: 70%;
+    margin-left: 4%;
+    color: white;
+    font-size: 25px;
+    position: relative;
+    top: 20px;
+  }

@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-offset-1 col-md-10">
+        <div class="panel">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col col-sm-3 col-xs-12">
+                <h4 class="title">DATA</h4>
+              </div>
+              <div class="col-sm-9 col-xs-12 text-right">
+                <div class="btn_group">
+                  <input
+                    type="text"
+                    required
+                    name="searchTerm"
+                    autocomplete="off"
+                    [(ngModel)]="searchTerm"
+                    class="form-control form-control-lg"
+                    placeholder="Search By Username And Email"
+                    (keyup)="onChange()"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-body table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Username</th>
+                  <th>Email</th>
+                  <th>Mobile No.</th>
+                  <th>Gender</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of data">
+                  <th scope="row">{{ item.username }}</th>
+                  <td>{{ item.email }}</td>
+                  <td>{{ item.mobileno }}</td>
+                  <td>{{ item.gender }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

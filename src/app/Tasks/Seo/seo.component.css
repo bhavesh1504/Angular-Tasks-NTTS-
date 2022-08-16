@@ -1,0 +1,12 @@
+.display-4{
+    text-align:center;
+    position: relative;
+    top: 10px;
+}
+
+.links li {
+    display: inline-block;
+    font-weight: 900;
+    margin-right: 25px;
+    cursor: pointer;
+  }

@@ -1,0 +1,15 @@
+.custom-centered{
+    margin:0 auto;
+    width:300px;
+   }
+.center {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    position: relative;
+    text-align: center;
+}
+
+.custom {
+    position: relative;
+    top: 10px;
+}
