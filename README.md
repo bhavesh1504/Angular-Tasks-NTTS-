@@ -1,3 +1,16 @@
+TASKS
+`````````
+This project includes all task except authentication tasks, role based, interceptors.
+
+
+
+
+
+
+
+
+
+
 # Projects
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
